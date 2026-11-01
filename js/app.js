@@ -25,6 +25,8 @@
     $(this).addClass('active');
     const label = $(this).find('span').first().text();
     $('.breadcrumb-line strong').text(label);
+    const target = document.querySelector($(this).attr('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (window.matchMedia('(max-width: 991px)').matches) closeSidebar();
   });
 
