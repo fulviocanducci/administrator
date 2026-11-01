@@ -1,13 +1,29 @@
-.clients-list-panel .records-heading{align-items:center;margin-bottom:13px}
-.clients-list-panel .create-button{height:36px;display:flex;align-items:center;gap:8px;padding:0 13px;border-radius:7px;font-size:10px;font-weight:600}
-.edit-client{width:30px;height:28px;display:grid;place-items:center;border:0;border-radius:6px;background:transparent;color:#888da0;font-size:14px}
+.clients-list-panel{padding:15px 16px 11px}
+.clients-list-panel .records-heading{align-items:center;margin-bottom:9px}
+.clients-list-panel .records-heading h2{font-size:12px;margin-bottom:2px}
+.clients-list-panel .records-heading p{font-size:9px}
+.clients-list-panel .create-button{height:30px;display:flex;align-items:center;gap:6px;padding:0 10px;border-radius:6px;font-size:9px;font-weight:600}
+.clients-list-panel .records-table{margin-bottom:7px}
+.clients-list-panel .records-table thead th{padding:8px 9px;font-size:8px;letter-spacing:.45px}
+.clients-list-panel .records-table tbody td{padding:7px 9px;font-size:10px;line-height:1.25}
+.clients-list-panel .client-cell{gap:8px}
+.clients-list-panel .client-avatar{width:27px;height:27px;font-size:8px}
+.clients-list-panel .client-cell strong{font-size:10px}
+.clients-list-panel .client-cell small{font-size:8px}
+.clients-list-panel .status-badge{padding:3px 6px;font-size:8px}
+.clients-list-panel .status-badge i{width:5px;height:5px;margin-right:4px}
+.clients-list-panel .amount-cell{font-size:10px}
+.edit-client{width:25px;height:24px;display:grid;place-items:center;border:0;border-radius:5px;background:transparent;color:#888da0;font-size:12px}
+.clients-list-panel .table-footer{padding-top:7px;font-size:9px}
+.clients-list-panel .table-footer nav{gap:3px}
+.clients-list-panel .table-footer nav button{width:23px;height:23px;font-size:9px}
 .edit-client:hover{background:#f1efff;color:var(--purple)}
 .client-validation{display:block;margin-top:4px;font-size:10px}
 .client-validation.field-validation-valid:empty{display:none}
 .client-form .input-validation-error{border-color:#dc3545}
-.clients-list-panel .records-table{min-width:650px}
+.clients-list-panel .records-table{min-width:590px}
 .client-validation.field-validation-error{color:#dc3545!important}
 .modal-subtitle{margin:4px 0 0;color:#9297a8;font-size:11px}
 html[data-bs-theme=dark] .edit-client{color:#abb0c0}
 html[data-bs-theme=dark] .edit-client:hover{background:#302d43;color:#ded9ff}
-@media(max-width:520px){.clients-list-panel .records-heading{align-items:flex-start;gap:12px}.clients-list-panel .create-button{flex:0 0 auto;padding:0 10px;font-size:9px}}
+@media(max-width:520px){.clients-list-panel{padding:13px 12px 9px}.clients-list-panel .records-heading{align-items:flex-start;gap:10px}.clients-list-panel .create-button{flex:0 0 auto;padding:0 8px;font-size:8px}.clients-list-panel .records-table{min-width:560px}}
