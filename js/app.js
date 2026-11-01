@@ -20,12 +20,14 @@
   });
   $('#sidebarBackdrop').on('click', closeSidebar);
   $('.side-link').on('click', function (event) {
+    const href = $(this).attr('href');
+    if (!href.startsWith('#')) return;
     event.preventDefault();
     $('.side-link').removeClass('active');
     $(this).addClass('active');
     const label = $(this).find('span').first().text();
     $('.breadcrumb-line strong').text(label);
-    const target = document.querySelector($(this).attr('href'));
+    const target = document.querySelector(href);
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (window.matchMedia('(max-width: 991px)').matches) closeSidebar();
   });
