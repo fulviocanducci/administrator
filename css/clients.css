@@ -1,0 +1,13 @@
+.clients-list-panel .records-heading{align-items:center;margin-bottom:13px}
+.clients-list-panel .create-button{height:36px;display:flex;align-items:center;gap:8px;padding:0 13px;border-radius:7px;font-size:10px;font-weight:600}
+.edit-client{width:30px;height:28px;display:grid;place-items:center;border:0;border-radius:6px;background:transparent;color:#888da0;font-size:14px}
+.edit-client:hover{background:#f1efff;color:var(--purple)}
+.client-validation{display:block;margin-top:4px;font-size:10px}
+.client-validation.field-validation-valid:empty{display:none}
+.client-form .input-validation-error{border-color:#dc3545}
+.clients-list-panel .records-table{min-width:650px}
+.client-validation.field-validation-error{color:#dc3545!important}
+.modal-subtitle{margin:4px 0 0;color:#9297a8;font-size:11px}
+html[data-bs-theme=dark] .edit-client{color:#abb0c0}
+html[data-bs-theme=dark] .edit-client:hover{background:#302d43;color:#ded9ff}
+@media(max-width:520px){.clients-list-panel .records-heading{align-items:flex-start;gap:12px}.clients-list-panel .create-button{flex:0 0 auto;padding:0 10px;font-size:9px}}
