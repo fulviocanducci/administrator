@@ -4,28 +4,6 @@
   const toast = bootstrap.Toast.getOrCreateInstance(document.getElementById('appToast'), { delay: 2800 });
   $('#clientCategory').select2({ placeholder: 'Selecione uma categoria', allowClear: true, width: '100%', dropdownParent: $('#newRecordModal') });
   $('#clientPhone').inputmask('(99) 99999-9999');
-  $('#newRecordForm').validate({
-    errorClass: 'error',
-    errorElement: 'span',
-    errorPlacement(error, element) {
-      if (element.attr('name') === 'category') error.insertAfter(element.next('.select2'));
-      else error.insertAfter(element);
-    },
-    rules: {
-      name: { required: true, minlength: 3 },
-      email: { required: true, email: true },
-      phone: { required: true, minlength: 15 },
-      category: { required: true },
-      status: { required: true }
-    },
-    messages: {
-      name: { required: 'Informe o nome completo.', minlength: 'Digite pelo menos 3 caracteres.' },
-      email: { required: 'Informe o e-mail.', email: 'Digite um e-mail válido.' },
-      phone: { required: 'Informe o telefone.', minlength: 'Digite o telefone com DDD.' },
-      category: { required: 'Selecione uma categoria.' },
-      status: { required: 'Selecione um status.' }
-    }
-  });
   const showToast = (message) => {
     $('#toastMessage').text(message);
     toast.show();
@@ -100,6 +78,7 @@
 
   $('#newRecordForm').on('submit', function (event) {
     event.preventDefault();
+    if (!$(this).valid()) return;
     const form = new FormData(this);
     const name = String(form.get('name')).trim();
     const email = String(form.get('email')).trim();
@@ -113,8 +92,9 @@
     $('#newRecordModal').modal('hide');
     this.reset();
     $('#clientCategory').val('').trigger('change');
-    $('#newRecordForm').validate().resetForm();
-    $('#newRecordForm .error').removeClass('error');
+    $('#newRecordForm').data('validator')?.resetForm();
+    $('#newRecordForm .input-validation-error').removeClass('input-validation-error');
+    $('#newRecordForm [data-valmsg-for]').removeClass('field-validation-error').addClass('field-validation-valid').empty();
     showToast(`${name} foi adicionado aos cadastros.`);
   });
 })();

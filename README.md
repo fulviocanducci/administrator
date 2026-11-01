@@ -14,6 +14,7 @@ A tela de entrada está em `login.html`. O login e a recuperação de senha são
 - Bootstrap Icons 1.13.1
 - jQuery 3.7.1
 - jQuery Validation 1.22.1
+- jQuery Validation Unobtrusive 4.0.0 (`data-val-*` validation rules)
 - Select2 4.1.0-rc.0
 - Inputmask 5.0.10
 - HTML5, CSS3 e JavaScript

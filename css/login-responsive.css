@@ -13,6 +13,11 @@ body.login-page{width:100%;min-width:0;max-width:100%;}
 .recovery-card .error:not(input){display:block;margin-top:5px;color:#dc625c!important;font-size:10px}
 .recovery-card .input-with-icon>input.error{border-color:#dc7770}
 .recovery-card .input-with-icon>input.error:focus{box-shadow:0 0 0 .2rem #dc777020}
+.validation-message{display:block;margin-top:5px;color:#dc625c!important;font-size:10px}
+.validation-message.field-validation-valid:empty{display:none}
+.field-validation-error{color:#dc625c!important}
+.input-validation-error{border-color:#dc7770!important}
+.input-validation-error:focus{box-shadow:0 0 0 .2rem #dc777020!important}
 .story-preview{transform:none}
 @media(max-width:900px){
   .login-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}

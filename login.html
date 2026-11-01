@@ -13,7 +13,7 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
   <link href="./css/styles.css?v=20261101" rel="stylesheet">
   <link href="./css/login.css?v=20261101-layout-restored" rel="stylesheet">
-  <link href="./css/login-responsive.css?v=20261101-4" rel="stylesheet">
+  <link href="./css/login-responsive.css?v=20261101-data-val" rel="stylesheet">
 </head>
 <body class="login-page">
   <main class="login-layout">
@@ -38,9 +38,9 @@
       <div class="login-main-top"><span class="mobile-brand"><span class="brand-mark"><i class="bi bi-grid-1x2-fill"></i></span>Nexo<span>Admin</span></span><a class="help-link" href="mailto:suporte@nexo.app"><i class="bi bi-question-circle"></i> Precisa de ajuda?</a></div>
       <div class="login-form-wrap">
         <div class="form-heading"><span class="form-eyebrow">BEM-VINDO DE VOLTA</span><h2 id="loginTitle">Acesse sua conta</h2><p>Entre com seus dados para continuar.</p></div>
-        <form id="loginForm" novalidate>
-          <div class="login-field"><label for="loginEmail">E-mail</label><div class="input-with-icon"><i class="bi bi-envelope"></i><input id="loginEmail" name="email" type="email" autocomplete="username" placeholder="voce@empresa.com"></div></div>
-          <div class="login-field"><div class="password-label-row"><label for="loginPassword">Senha</label><a href="#recuperar" data-bs-toggle="modal" data-bs-target="#recoveryModal">Esqueceu sua senha?</a></div><div class="input-with-icon password-input"><i class="bi bi-lock"></i><input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha"><button type="button" id="togglePassword" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button></div></div>
+        <form id="loginForm" novalidate data-val="true">
+          <div class="login-field"><label for="loginEmail">E-mail</label><div class="input-with-icon"><i class="bi bi-envelope"></i><input id="loginEmail" name="email" type="email" autocomplete="username" placeholder="voce@empresa.com" data-val="true" data-val-required="Informe seu e-mail." data-val-email="Digite um e-mail válido."></div><span class="login-validation-message field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span></div>
+          <div class="login-field"><div class="password-label-row"><label for="loginPassword">Senha</label><a href="#recuperar" data-bs-toggle="modal" data-bs-target="#recoveryModal">Esqueceu sua senha?</a></div><div class="input-with-icon password-input"><i class="bi bi-lock"></i><input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" data-val="true" data-val-required="Informe sua senha." data-val-length="A senha deve ter pelo menos 6 caracteres." data-val-length-min="6"><button type="button" id="togglePassword" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button></div><span class="login-validation-message field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span></div>
           <div class="login-options"><label class="remember-option"><input class="form-check-input" type="checkbox" id="rememberMe"><span>Manter conectado</span></label><span class="secure-note"><i class="bi bi-shield-lock"></i> Login seguro</span></div>
           <button class="btn btn-primary login-submit" type="submit"><span>Entrar</span><i class="bi bi-arrow-right"></i></button>
           <div class="login-feedback" id="loginFeedback" role="status" aria-live="polite"></div>
@@ -52,10 +52,11 @@
     </section>
   </main>
 
-  <div class="modal fade" id="recoveryModal" tabindex="-1" aria-labelledby="recoveryTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-sm"><form class="modal-content recovery-card" id="recoveryForm" novalidate><div class="modal-header"><div class="recovery-icon"><i class="bi bi-key"></i></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><h2 id="recoveryTitle">Recupere seu acesso</h2><p>Informe seu e-mail e enviaremos instruções para redefinir sua senha.</p><label for="recoveryEmail" class="form-label">E-mail cadastrado</label><div class="input-with-icon"><i class="bi bi-envelope"></i><input class="form-control" id="recoveryEmail" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com"></div><div class="recovery-feedback" id="recoveryFeedback" role="status"></div></div><div class="modal-footer"><button type="button" class="btn btn-light border" data-bs-dismiss="modal">Voltar ao login</button><button type="submit" class="btn btn-primary">Enviar instruções <i class="bi bi-arrow-right ms-1"></i></button></div></form></div></div>
+  <div class="modal fade" id="recoveryModal" tabindex="-1" aria-labelledby="recoveryTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-sm"><form class="modal-content recovery-card" id="recoveryForm" novalidate data-val="true"><div class="modal-header"><div class="recovery-icon"><i class="bi bi-key"></i></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><h2 id="recoveryTitle">Recupere seu acesso</h2><p>Informe seu e-mail e enviaremos instruções para redefinir sua senha.</p><label for="recoveryEmail" class="form-label">E-mail cadastrado</label><div class="input-with-icon"><i class="bi bi-envelope"></i><input class="form-control" id="recoveryEmail" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com" data-val="true" data-val-required="Informe seu e-mail." data-val-email="Digite um e-mail válido."></div><span class="login-validation-message field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span><div class="recovery-feedback" id="recoveryFeedback" role="status"></div></div><div class="modal-footer"><button type="button" class="btn btn-light border" data-bs-dismiss="modal">Voltar ao login</button><button type="submit" class="btn btn-primary">Enviar instruções <i class="bi bi-arrow-right ms-1"></i></button></div></form></div></div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.22.1/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@4.0.0/dist/jquery.validate.unobtrusive.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/login.js?v=20261101-recovery-validation"></script>
+  <script src="./js/login.js?v=20261101-data-val"></script>
 </body>
 </html>
