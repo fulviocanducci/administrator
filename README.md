@@ -11,6 +11,9 @@ Abra `index.html` no navegador. As fontes e bibliotecas usam CDN, então precisa
 - Bootstrap 5.3.8 (versão estável; Bootstrap 6 ainda está em alpha)
 - Bootstrap Icons 1.13.1
 - jQuery 3.7.1
+- jQuery Validation 1.22.1
+- Select2 4.1.0-rc.0
+- Inputmask 5.0.10
 - HTML5, CSS3 e JavaScript
 
 O formulário de cadastro adiciona linhas de demonstração à tabela atual. Cadastros, relatórios e demais dados ainda não estão conectados a um backend.

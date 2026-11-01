@@ -2,6 +2,30 @@
   const $ = window.jQuery;
   const root = document.documentElement;
   const toast = bootstrap.Toast.getOrCreateInstance(document.getElementById('appToast'), { delay: 2800 });
+  $('#clientCategory').select2({ placeholder: 'Selecione uma categoria', allowClear: true, width: '100%', dropdownParent: $('#newRecordModal') });
+  $('#clientPhone').inputmask('(99) 99999-9999');
+  $('#newRecordForm').validate({
+    errorClass: 'error',
+    errorElement: 'span',
+    errorPlacement(error, element) {
+      if (element.attr('name') === 'category') error.insertAfter(element.next('.select2'));
+      else error.insertAfter(element);
+    },
+    rules: {
+      name: { required: true, minlength: 3 },
+      email: { required: true, email: true },
+      phone: { required: true, minlength: 15 },
+      category: { required: true },
+      status: { required: true }
+    },
+    messages: {
+      name: { required: 'Informe o nome completo.', minlength: 'Digite pelo menos 3 caracteres.' },
+      email: { required: 'Informe o e-mail.', email: 'Digite um e-mail válido.' },
+      phone: { required: 'Informe o telefone.', minlength: 'Digite o telefone com DDD.' },
+      category: { required: 'Selecione uma categoria.' },
+      status: { required: 'Selecione um status.' }
+    }
+  });
   const showToast = (message) => {
     $('#toastMessage').text(message);
     toast.show();
@@ -76,18 +100,21 @@
 
   $('#newRecordForm').on('submit', function (event) {
     event.preventDefault();
-    if (!this.reportValidity()) return;
     const form = new FormData(this);
     const name = String(form.get('name')).trim();
     const email = String(form.get('email')).trim();
     const initials = name.split(/\s+/).slice(0, 2).map((part) => part[0]).join('').toUpperCase();
     const status = String(form.get('status'));
+    const category = String(form.get('category'));
     const safe = (value) => $('<span>').text(value).html();
     const statusClass = status === 'Ativo' ? 'status-active' : 'status-pending';
-    const row = `<tr><td><div class="client-cell"><span class="client-avatar avatar-violet">${safe(initials)}</span><span><strong>${safe(name)}</strong><small>${safe(email)}</small></span></div></td><td><span class="status-badge ${statusClass}"><i></i>${safe(status)}</span></td><td>Hoje</td><td class="amount-cell">R$ 0,00</td><td><button class="row-more" aria-label="Opções para ${safe(name)}"><i class="bi bi-three-dots"></i></button></td></tr>`;
+    const row = `<tr><td><div class="client-cell"><span class="client-avatar avatar-violet">${safe(initials)}</span><span><strong>${safe(name)}</strong><small>${safe(email)} · ${safe(category)}</small></span></div></td><td><span class="status-badge ${statusClass}"><i></i>${safe(status)}</span></td><td>Hoje</td><td class="amount-cell">R$ 0,00</td><td><button class="row-more" aria-label="Opções para ${safe(name)}"><i class="bi bi-three-dots"></i></button></td></tr>`;
     $('.records-table tbody').prepend(row);
     $('#newRecordModal').modal('hide');
     this.reset();
+    $('#clientCategory').val('').trigger('change');
+    $('#newRecordForm').validate().resetForm();
+    $('#newRecordForm .error').removeClass('error');
     showToast(`${name} foi adicionado aos cadastros.`);
   });
 })();
