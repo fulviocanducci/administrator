@@ -8,6 +8,8 @@ Abra `index.html` no navegador. As fontes e bibliotecas usam CDN, então precisa
 
 A área de clientes está em `clientes.html` e usa a mesma navegação e grade do painel.
 
+O cadastro e a edição de clientes ficam em `cliente-cadastro.html`. Os dados salvos são demonstrativos e permanecem apenas na sessão atual do navegador; conecte a um backend para persistência real.
+
 A tela de entrada está em `login.html`. O login e a recuperação de senha são fluxos de demonstração; conecte-os a uma API antes de usar com contas reais.
 
 A tela para definir uma nova senha está em `recuperar-senha.html` e pode ser aberta após validar o e-mail no modal de recuperação. O salvamento da senha também depende de uma API.
