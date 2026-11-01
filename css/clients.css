@@ -6,11 +6,12 @@
 .client-searchbar{display:flex;align-items:center;gap:7px;margin:12px 0 10px}
 .client-search-input{position:relative;width:min(100%,360px);max-width:360px;flex:1 1 260px}
 .client-search-input .search-field-icon{position:absolute;z-index:4;left:10px;top:50%;transform:translateY(-50%);color:#9297a8;font-size:11px;pointer-events:none}
-.client-search-input .form-control{min-width:0;padding-left:29px;border-color:var(--line);font-size:var(--bs-btn-font-size)}
+.client-search-input>.form-control{min-width:0;padding-left:29px;border-color:var(--line);border-top-left-radius:7px!important;border-bottom-left-radius:7px!important;font-size:var(--bs-btn-font-size)}
 .client-search-input .form-control:focus{box-shadow:0 0 0 .15rem rgba(112,87,232,.12);border-color:var(--purple)}
+.client-search-input>.search-clients-button:last-child{border-top-right-radius:7px!important;border-bottom-right-radius:7px!important}
 .search-clients-button,.clients-list-panel .create-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
-.search-clients-button{width:31px;flex:0 0 31px;padding:0}
-.clients-list-panel .create-button{width:31px;height:31px;flex:0 0 31px;margin-left:0;padding:0}
+.search-clients-button{width:34px;flex:0 0 34px;padding:0}
+.clients-list-panel .create-button{width:34px;height:34px;flex:0 0 34px;margin-left:0;padding:0;border:1px solid var(--purple-dark);border-radius:8px;box-shadow:0 2px 5px rgba(95,70,209,.16)}
 .clients-list-panel .records-table{margin-bottom:7px}
 .clients-list-panel .records-table thead th{font-size:8px;letter-spacing:.45px}
 .clients-list-panel .records-table tbody td{font-size:10px;line-height:1.25}
