@@ -8,13 +8,6 @@
 
   const today = new Date();
   $('#todayLabel').text(new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }).format(today).toUpperCase());
-  const monday = new Date(today);
-  monday.setDate(today.getDate() - ((today.getDay() + 6) % 7));
-  const sunday = new Date(monday);
-  sunday.setDate(monday.getDate() + 6);
-  const formatDate = (date) => new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short' }).format(date).replace('.', '');
-  $('#weekLabel').text(`${formatDate(monday)} — ${formatDate(sunday)}, ${sunday.getFullYear()}`);
-
   const closeSidebar = () => {
     $('#sidebar').removeClass('is-open');
     $('#sidebarBackdrop').removeClass('is-visible');
@@ -39,7 +32,6 @@
     if (event.key === 'Escape') closeSidebar();
   });
 
-  $('.profile-button').on('click', () => showToast('Perfil de Fulvio Costa'));
   $('.more-button, .row-more').on('click', function () {
     const name = $(this).closest('tr').find('.client-cell strong').text();
     showToast(name ? `Opções de ${name}` : 'Mais opções em breve');
