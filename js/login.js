@@ -14,6 +14,10 @@
   loginForm.validate({
     errorClass: 'error',
     errorElement: 'span',
+    errorPlacement(error, element) {
+      // Keep the validation message outside the flex row that contains the input.
+      error.insertAfter(element.closest('.input-with-icon'));
+    },
     rules: {
       email: { required: true, email: true },
       password: { required: true, minlength: 6 }
