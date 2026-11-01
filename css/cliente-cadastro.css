@@ -2,7 +2,7 @@
 body{min-width:0}
 .breadcrumb-home,.breadcrumb-line a{color:inherit;text-decoration:none}
 .breadcrumb-line a:hover{color:var(--purple)}
-.form-back{white-space:nowrap;border:1px solid var(--line);color:var(--ink);border-radius:7px;padding:7px 10px;font-size:10px}
+.form-back{white-space:nowrap}
 .client-form-panel{padding:20px 22px}
 .client-form-heading{display:flex;align-items:center;gap:10px;padding-bottom:15px;margin-bottom:17px;border-bottom:1px solid var(--line)}
 .form-heading-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:10px;background:#f0edff;color:var(--purple);font-size:16px}
@@ -11,10 +11,10 @@ body{min-width:0}
 .required-mark{color:#e05252}
 .client-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px 16px}
 .form-field{min-width:0}
-.form-field label{display:block;margin:0 0 5px;color:var(--ink);font-size:10px;font-weight:600}
+.form-field label{display:block;margin:0 0 5px;color:var(--ink);font-size:.875rem;font-weight:600}
 .input-with-icon{position:relative}
 .input-with-icon>i{position:absolute;z-index:2;left:11px;top:50%;transform:translateY(-50%);color:#a0a5b6;font-size:12px;pointer-events:none}
-.input-with-icon .form-control,.input-with-icon .form-select{height:36px;min-height:36px;padding:6px 10px 6px 32px;border-color:var(--line);border-radius:7px;color:var(--ink);font-size:10px;box-shadow:none}
+.input-with-icon .form-control,.input-with-icon .form-select{padding-left:32px;border-color:var(--line);border-radius:7px;color:var(--ink);box-shadow:none}
 .input-with-icon .form-control::placeholder{color:#a6abba}
 .input-with-icon .form-control:focus,.input-with-icon .form-select:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(111,81,226,.12)}
 .input-with-icon .form-control.input-validation-error,.input-with-icon .form-select.input-validation-error{border-color:#e05252!important;background-image:none!important;box-shadow:0 0 0 3px rgba(224,82,82,.1)!important}
@@ -23,7 +23,7 @@ body{min-width:0}
 .input-validation-icon{display:none;position:absolute;right:13px;top:50%;transform:translateY(-50%);color:#d83e3e}
 .input-with-icon:has(.input-validation-error) .input-validation-icon{display:block}
 .client-form-actions{display:flex;justify-content:flex-end;gap:8px;padding-top:16px;margin-top:18px;border-top:1px solid var(--line)}
-.client-form-actions .btn{min-height:32px;padding:6px 12px;border-radius:7px;font-size:10px}
+.client-form-actions .btn{border-radius:7px}
 .client-form-actions .btn-primary{background:var(--purple);border-color:var(--purple);font-weight:600}
 .client-form-actions .btn-primary:hover{background:#6045d3;border-color:#6045d3}
 html[data-bs-theme=dark] .form-heading-icon{background:#302b47;color:#c7baff}
