@@ -25,4 +25,4 @@ Os templates iniciais para ASP.NET Razor ficam em `cshtml/login/`: `_LayoutLogin
 - Inputmask 5.0.10
 - HTML5, CSS3 e JavaScript
 
-O formulário de cadastro adiciona linhas de demonstração à tabela atual. Cadastros, relatórios e demais dados ainda não estão conectados a um backend.
+O painel exibe dados demonstrativos. Cadastros, relatórios e demais dados ainda não estão conectados a um backend.
