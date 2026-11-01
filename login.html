@@ -13,7 +13,7 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
   <link href="./css/styles.css?v=20261101" rel="stylesheet">
   <link href="./css/login.css?v=20261101-layout-restored" rel="stylesheet">
-  <link href="./css/login-responsive.css?v=20261101-data-val" rel="stylesheet">
+  <link href="./css/login-responsive.css?v=20261101-login-copy" rel="stylesheet">
 </head>
 <body class="login-page">
   <main class="login-layout">
@@ -22,22 +22,21 @@
       <div class="story-content">
         <span class="story-kicker"><span class="live-dot"></span> GESTÃO MAIS SIMPLES, TODOS OS DIAS</span>
         <h1>Seu negócio<br>em boas mãos<span>.</span></h1>
-        <p>Uma visão clara da sua operação para você cuidar do que realmente importa.</p>
-        <div class="story-preview" aria-hidden="true">
-          <div class="preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-title">Visão geral</span><span class="preview-avatar">FC</span></div>
-          <div class="preview-greeting">Bom dia, Fulvio <span>✦</span><small>Aqui está o resumo da sua operação.</small></div>
-          <div class="preview-metrics"><div><small>Receita do mês</small><strong>R$ 48.290</strong><span><i class="bi bi-arrow-up-right"></i> 8,2%</span></div><div><small>Total de clientes</small><strong>2.486</strong><span><i class="bi bi-arrow-up-right"></i> 12,8%</span></div></div>
-          <div class="preview-chart"><div class="preview-chart-head"><strong>Visão financeira</strong><span>Esta semana <i class="bi bi-chevron-down"></i></span></div><svg viewBox="0 0 460 104" preserveAspectRatio="none"><defs><linearGradient id="loginFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8a72f1" stop-opacity=".23"/><stop offset="1" stop-color="#8a72f1" stop-opacity="0"/></linearGradient></defs><path fill="url(#loginFill)" d="M0 80 C40 77 49 53 92 62 S148 82 184 48 S239 30 276 48 S329 60 368 31 S421 41 460 9 L460 104 L0 104Z"/><path d="M0 80 C40 77 49 53 92 62 S148 82 184 48 S239 30 276 48 S329 60 368 31 S421 41 460 9" fill="none" stroke="#9179f0" stroke-width="3" stroke-linecap="round"/></svg><div class="preview-days"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div></div>
+        <p>Um sistema de administração para organizar e acompanhar a operação do seu negócio.</p>
+        <div class="story-message">
+          <span class="system-badge"><i class="bi bi-grid-1x2"></i> SISTEMA DE ADMINISTRAÇÃO</span>
+          <h2>Administre tudo em um só lugar.</h2>
+          <p>Gerencie cadastros, consulte relatórios e acompanhe as rotinas do sistema com praticidade.</p>
+          <div class="story-features"><span><i class="bi bi-people"></i> Cadastros</span><span><i class="bi bi-bar-chart-line"></i> Relatórios</span><span><i class="bi bi-sliders"></i> Gestão</span></div>
         </div>
       </div>
-      <div class="story-footer"><span>© 2026 Nexo Admin</span><span><i class="bi bi-shield-check"></i> Ambiente seguro</span></div>
       <span class="decor decor-one"></span><span class="decor decor-two"></span>
     </section>
 
     <section class="login-main" aria-labelledby="loginTitle">
-      <div class="login-main-top"><span class="mobile-brand"><span class="brand-mark"><i class="bi bi-grid-1x2-fill"></i></span>Nexo<span>Admin</span></span><a class="help-link" href="mailto:suporte@nexo.app"><i class="bi bi-question-circle"></i> Precisa de ajuda?</a></div>
+      <div class="login-main-top"><span class="mobile-brand"><span class="brand-mark"><i class="bi bi-grid-1x2-fill"></i></span>Nexo<span>Admin</span></span></div>
       <div class="login-form-wrap">
-        <div class="form-heading"><span class="form-eyebrow">BEM-VINDO DE VOLTA</span><h2 id="loginTitle">Acesse sua conta</h2><p>Entre com seus dados para continuar.</p></div>
+        <div class="form-heading"><span class="form-eyebrow">BEM-VINDO DE VOLTA</span><h2 id="loginTitle">Acesse sua conta</h2><p>Entre para administrar cadastros, relatórios e a operação do seu sistema.</p></div>
         <form id="loginForm" novalidate data-val="true">
           <div class="login-field"><label for="loginEmail">E-mail</label><div class="input-with-icon"><i class="bi bi-envelope"></i><input id="loginEmail" name="email" type="email" autocomplete="username" placeholder="voce@empresa.com" data-val="true" data-val-required="Informe seu e-mail." data-val-email="Digite um e-mail válido."></div><span class="login-validation-message field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span></div>
           <div class="login-field"><div class="password-label-row"><label for="loginPassword">Senha</label><a href="#recuperar" data-bs-toggle="modal" data-bs-target="#recoveryModal">Esqueceu sua senha?</a></div><div class="input-with-icon password-input"><i class="bi bi-lock"></i><input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" data-val="true" data-val-required="Informe sua senha." data-val-length="A senha deve ter pelo menos 6 caracteres." data-val-length-min="6"><button type="button" id="togglePassword" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button></div><span class="login-validation-message field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span></div>
@@ -45,10 +44,7 @@
           <button class="btn btn-primary login-submit" type="submit"><span>Entrar</span><i class="bi bi-arrow-right"></i></button>
           <div class="login-feedback" id="loginFeedback" role="status" aria-live="polite"></div>
         </form>
-        <div class="login-separator"><span></span><small>ACESSO À PLATAFORMA</small><span></span></div>
-        <p class="login-help">Ainda não tem acesso? <a href="mailto:suporte@nexo.app">Fale com o administrador <i class="bi bi-arrow-up-right"></i></a></p>
       </div>
-      <div class="login-main-footer"><a href="#privacidade">Privacidade</a><span>·</span><a href="#termos">Termos de uso</a><span class="footer-version">Nexo Admin <i class="bi bi-dot"></i> v1.0</span></div>
     </section>
   </main>
 
