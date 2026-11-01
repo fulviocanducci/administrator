@@ -1,8 +1,13 @@
 /* Small-screen overrides kept separate from the base login design. */
 .login-page{width:100%;overflow-x:hidden}
+body.login-page{width:100%;min-width:0;max-width:100%;}
 .login-layout{width:100%;max-width:100vw;min-width:0}
 .login-story,.login-main{min-width:0;min-height:100vh;min-height:100svh}
 .story-content,.login-form-wrap{min-width:0}
+.login-main{box-sizing:border-box;width:100%;}
+.login-form-wrap{box-sizing:border-box;flex:0 1 400px;width:100%;}
+.login-main-top,.login-main-footer{box-sizing:border-box;width:100%;min-width:0}
+.input-with-icon,.input-with-icon>input,.login-submit{box-sizing:border-box;min-width:0;max-width:100%}
 .story-preview{transform:none}
 @media(max-width:900px){
   .login-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
@@ -25,5 +30,8 @@
 }
 @media(max-width:380px){
   .login-main{padding-right:max(18px,env(safe-area-inset-right));padding-left:max(18px,env(safe-area-inset-left))}
-  .help-link{font-size:9px}
+  .login-main-top{gap:8px}
+  .help-link{gap:4px;font-size:9px;white-space:nowrap}
+  .mobile-brand{font-size:15px;gap:6px}
+  .mobile-brand .brand-mark{width:26px;height:26px}
 }
