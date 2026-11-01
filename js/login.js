@@ -39,7 +39,9 @@
     errorElement: 'span',
     rules: { email: { required: true, email: true } },
     messages: { email: { required: 'Informe seu e-mail.', email: 'Digite um e-mail válido.' } },
-    errorPlacement(error, element) { error.insertAfter(element); },
+    errorPlacement(error, element) {
+      error.insertAfter(element.closest('.input-with-icon'));
+    },
     submitHandler() {
       $('#recoveryFeedback').text('Solicitação de demonstração registrada. O envio real requer integração com o servidor.').css('color', '#279d79');
       return false;
