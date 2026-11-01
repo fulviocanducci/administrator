@@ -22,7 +22,8 @@
   recoveryForm.on('submit', function (event) {
     event.preventDefault();
     if (!recoveryForm.valid()) return;
-    $('#recoveryFeedback').text('Solicitação de demonstração registrada. O envio real requer integração com o servidor.').css('color', '#279d79');
+    $('#recoveryFeedback').text('Solicitação registrada em modo de demonstração.').css('color', '#279d79');
+    $('#recoveryContinue').removeClass('d-none');
   });
 
   $('#recoveryModal').on('hidden.bs.modal', () => {
@@ -31,5 +32,6 @@
     recoveryForm.find('.input-validation-error').removeClass('input-validation-error');
     recoveryForm.find('[data-valmsg-for]').removeClass('field-validation-error').addClass('field-validation-valid').empty();
     $('#recoveryFeedback').text('').css('color', '');
+    $('#recoveryContinue').addClass('d-none');
   });
 })();

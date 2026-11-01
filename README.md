@@ -8,6 +8,8 @@ Abra `index.html` no navegador. As fontes e bibliotecas usam CDN, então precisa
 
 A tela de entrada está em `login.html`. O login e a recuperação de senha são fluxos de demonstração; conecte-os a uma API antes de usar com contas reais.
 
+A tela para definir uma nova senha está em `recuperar-senha.html` e pode ser aberta após validar o e-mail no modal de recuperação. O salvamento da senha também depende de uma API.
+
 ## Stack
 
 - Bootstrap 5.3.8 (versão estável; Bootstrap 6 ainda está em alpha)

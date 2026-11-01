@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Recuperar senha · Nexo Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="./css/styles.css?v=20261101-data-val" rel="stylesheet">
+  <link href="./css/login.css?v=20261101-layout-restored" rel="stylesheet">
+  <link href="./css/login-responsive.css?v=20261101-login-copy" rel="stylesheet">
+  <link href="./css/reset-password.css?v=20261101-1" rel="stylesheet">
+</head>
+<body class="login-page reset-password-page">
+  <main class="login-layout">
+    <section class="login-story" aria-label="Sistema administrativo">
+      <a class="brand login-brand" href="./index.html"><span class="brand-mark"><i class="bi bi-grid-1x2-fill"></i></span><span>Nexo<span class="brand-light">Admin</span></span></a>
+      <div class="story-content">
+        <span class="story-kicker"><span class="live-dot"></span> RECUPERAÇÃO DE ACESSO</span>
+        <h1>Uma nova senha,<br>um novo começo<span>.</span></h1>
+        <p>Atualize sua senha para voltar a administrar cadastros, relatórios e a operação do seu sistema.</p>
+        <div class="story-message"><span class="system-badge"><i class="bi bi-shield-lock"></i> SUA CONTA, SOB SEU CONTROLE</span><h2>Escolha uma senha forte e exclusiva.</h2><p>Use pelo menos 8 caracteres para proteger seu acesso.</p></div>
+      </div>
+      <span class="decor decor-one"></span><span class="decor decor-two"></span>
+    </section>
+
+    <section class="login-main" aria-labelledby="resetTitle">
+      <div class="login-main-top"><a class="mobile-brand" href="./index.html"><span class="brand-mark"><i class="bi bi-grid-1x2-fill"></i></span>Nexo<span>Admin</span></a></div>
+      <div class="login-form-wrap">
+        <div class="form-heading"><span class="form-eyebrow">REDEFINIR ACESSO</span><h2 id="resetTitle">Crie uma nova senha</h2><p>Digite sua nova senha e confirme para continuar.</p></div>
+        <form id="resetPasswordForm" novalidate data-val="true">
+          <div class="login-field"><label for="newPassword">Nova senha</label><div class="input-with-icon password-input"><i class="bi bi-lock"></i><input id="newPassword" name="newPassword" type="password" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" data-val="true" data-val-required="Informe a nova senha." data-val-length="A senha deve ter pelo menos 8 caracteres." data-val-length-min="8"><button type="button" class="password-visibility" data-target="newPassword" aria-label="Mostrar nova senha"><i class="bi bi-eye"></i></button></div><span class="login-validation-message field-validation-valid" data-valmsg-for="newPassword" data-valmsg-replace="true"></span></div>
+          <div class="login-field"><label for="confirmPassword">Confirmar senha</label><div class="input-with-icon password-input"><i class="bi bi-lock-fill"></i><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" data-val="true" data-val-required="Confirme sua nova senha." data-val-equalto="As senhas não conferem." data-val-equalto-other="*.newPassword"><button type="button" class="password-visibility" data-target="confirmPassword" aria-label="Mostrar confirmação de senha"><i class="bi bi-eye"></i></button></div><span class="login-validation-message field-validation-valid" data-valmsg-for="confirmPassword" data-valmsg-replace="true"></span></div>
+          <button class="btn btn-primary login-submit reset-submit" type="submit"><span>Recuperar</span><i class="bi bi-key-fill"></i></button>
+          <div class="reset-feedback" id="resetFeedback" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.22.1/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@4.0.0/dist/jquery.validate.unobtrusive.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/reset-password.js?v=20261101-1"></script>
+</body>
+</html>
