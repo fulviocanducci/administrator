@@ -10,6 +10,10 @@ A tela de entrada está em `login.html`. O login e a recuperação de senha são
 
 A tela para definir uma nova senha está em `recuperar-senha.html` e pode ser aberta após validar o e-mail no modal de recuperação. O salvamento da senha também depende de uma API.
 
+## Views Razor
+
+Os templates iniciais para ASP.NET Razor ficam em `cshtml/login/`: `_LayoutLoginBase.cshtml` contém a estrutura comum, enquanto `login.cshtml` e `recovery.cshtml` contêm os formulários de cada fluxo. O repositório continua sendo estático; estas views precisam ser usadas por um host ASP.NET para serem compiladas e servidas como Razor.
+
 ## Stack
 
 - Bootstrap 5.3.8 (versão estável; Bootstrap 6 ainda está em alpha)

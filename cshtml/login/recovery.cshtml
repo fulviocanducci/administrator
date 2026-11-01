@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Recuperar senha";
+    ViewData["BodyClass"] = "reset-password-page";
+    Layout = "_LayoutLoginBase.cshtml";
+}
+
+@section AuthStory {
+    <div class="story-content">
+        <span class="story-kicker"><span class="live-dot"></span> RECUPERAÇÃO DE ACESSO</span>
+        <h1>Uma nova senha,<br>um novo começo<span>.</span></h1>
+        <p>Atualize sua senha para voltar a administrar cadastros, relatórios e a operação do seu sistema.</p>
+        <div class="story-message">
+            <span class="system-badge"><i class="bi bi-shield-lock"></i> SUA CONTA, SOB SEU CONTROLE</span>
+            <h2>Escolha uma senha forte e exclusiva.</h2>
+            <p>Use pelo menos 8 caracteres para proteger seu acesso.</p>
+            <div class="story-features"><span><i class="bi bi-lock"></i> Segurança</span><span><i class="bi bi-key"></i> Nova senha</span><span><i class="bi bi-person-check"></i> Acesso</span></div>
+        </div>
+    </div>
+}
+
+<div class="login-form-wrap">
+    <div class="form-heading"><span class="form-eyebrow">REDEFINIR ACESSO</span><h2 id="resetTitle">Crie uma nova senha</h2><p>Digite sua nova senha e confirme para continuar.</p></div>
+    <form id="resetPasswordForm" novalidate data-val="true">
+        <div class="login-field">
+            <label for="newPassword">Nova senha</label>
+            <div class="input-with-icon password-input"><i class="bi bi-lock"></i><input id="newPassword" name="newPassword" type="password" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" data-val="true" data-val-required="Informe a nova senha." data-val-length="A senha deve ter pelo menos 8 caracteres." data-val-length-min="8"><button type="button" class="password-visibility" data-target="newPassword" aria-label="Mostrar nova senha"><i class="bi bi-eye"></i></button></div>
+            <span class="login-validation-message field-validation-valid" data-valmsg-for="newPassword" data-valmsg-replace="true"></span>
+        </div>
+        <div class="login-field">
+            <label for="confirmPassword">Confirmar senha</label>
+            <div class="input-with-icon password-input"><i class="bi bi-lock-fill"></i><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" data-val="true" data-val-required="Confirme sua nova senha." data-val-equalto="As senhas não conferem." data-val-equalto-other="*.newPassword"><button type="button" class="password-visibility" data-target="confirmPassword" aria-label="Mostrar confirmação de senha"><i class="bi bi-eye"></i></button></div>
+            <span class="login-validation-message field-validation-valid" data-valmsg-for="confirmPassword" data-valmsg-replace="true"></span>
+        </div>
+        <button class="btn btn-primary login-submit reset-submit" type="submit"><span>Recuperar</span><i class="bi bi-key-fill"></i></button>
+        <div class="reset-feedback" id="resetFeedback" role="status" aria-live="polite"></div>
+    </form>
+</div>
+
+@section Styles {
+    <link href="@Url.Content("~/css/reset-password.css")?v=20261101-1" rel="stylesheet">
+}
+
+@section Scripts {
+    <script src="@Url.Content("~/js/reset-password.js")?v=20261101-1"></script>
+}

@@ -1,0 +1,61 @@
+@{
+    ViewData["Title"] = "Entrar";
+    Layout = "_LayoutLoginBase.cshtml";
+}
+
+@section AuthStory {
+    <div class="story-content">
+        <span class="story-kicker"><span class="live-dot"></span> GESTÃO MAIS SIMPLES, TODOS OS DIAS</span>
+        <h1>Seu negócio<br>em boas mãos<span>.</span></h1>
+        <p>Um sistema de administração para organizar e acompanhar a operação do seu negócio.</p>
+        <div class="story-message">
+            <span class="system-badge"><i class="bi bi-grid-1x2"></i> SISTEMA DE ADMINISTRAÇÃO</span>
+            <h2>Administre tudo em um só lugar.</h2>
+            <p>Gerencie cadastros, consulte relatórios e acompanhe as rotinas do sistema com praticidade.</p>
+            <div class="story-features"><span><i class="bi bi-people"></i> Cadastros</span><span><i class="bi bi-bar-chart-line"></i> Relatórios</span><span><i class="bi bi-sliders"></i> Gestão</span></div>
+        </div>
+    </div>
+}
+
+<div class="login-form-wrap">
+    <div class="form-heading"><span class="form-eyebrow">BEM-VINDO DE VOLTA</span><h2 id="loginTitle">Acesse sua conta</h2><p>Entre para administrar cadastros, relatórios e a operação do seu sistema.</p></div>
+    <form id="loginForm" novalidate data-val="true">
+        <div class="login-field">
+            <label for="loginEmail">E-mail</label>
+            <div class="input-with-icon"><i class="bi bi-envelope"></i><input id="loginEmail" name="email" type="email" autocomplete="username" placeholder="voce@empresa.com" data-val="true" data-val-required="Informe seu e-mail." data-val-email="Digite um e-mail válido."></div>
+            <span class="login-validation-message field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+        </div>
+        <div class="login-field">
+            <div class="password-label-row"><label for="loginPassword">Senha</label><a href="#recuperar" data-bs-toggle="modal" data-bs-target="#recoveryModal">Esqueceu sua senha?</a></div>
+            <div class="input-with-icon password-input"><i class="bi bi-lock"></i><input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha" data-val="true" data-val-required="Informe sua senha." data-val-length="A senha deve ter pelo menos 6 caracteres." data-val-length-min="6"><button type="button" id="togglePassword" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button></div>
+            <span class="login-validation-message field-validation-valid" data-valmsg-for="password" data-valmsg-replace="true"></span>
+        </div>
+        <div class="login-options"><label class="remember-option"><input class="form-check-input" type="checkbox" id="rememberMe"><span>Manter conectado</span></label><span class="secure-note"><i class="bi bi-shield-lock"></i> Login seguro</span></div>
+        <button class="btn btn-primary login-submit" type="submit"><span>Entrar</span><i class="bi bi-arrow-right"></i></button>
+        <div class="login-feedback" id="loginFeedback" role="status" aria-live="polite"></div>
+    </form>
+</div>
+
+@section Modals {
+    <div class="modal fade" id="recoveryModal" tabindex="-1" aria-labelledby="recoveryTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <form class="modal-content recovery-card" id="recoveryForm" novalidate data-val="true">
+                <div class="modal-header"><div class="recovery-icon"><i class="bi bi-key"></i></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div>
+                <div class="modal-body">
+                    <h2 id="recoveryTitle">Recupere seu acesso</h2>
+                    <p>Informe seu e-mail e enviaremos instruções para redefinir sua senha.</p>
+                    <label for="recoveryEmail" class="form-label">E-mail cadastrado</label>
+                    <div class="input-with-icon"><i class="bi bi-envelope"></i><input class="form-control" id="recoveryEmail" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com" data-val="true" data-val-required="Informe seu e-mail." data-val-email="Digite um e-mail válido."></div>
+                    <span class="login-validation-message field-validation-valid" data-valmsg-for="email" data-valmsg-replace="true"></span>
+                    <div class="recovery-feedback" id="recoveryFeedback" role="status"></div>
+                    <a id="recoveryContinue" class="recovery-continue d-none" href="@Url.Content("~/recuperar-senha.html")">Continuar para redefinir a senha <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-light border" data-bs-dismiss="modal">Voltar ao login</button><button type="submit" class="btn btn-primary">Enviar instruções <i class="bi bi-arrow-right ms-1"></i></button></div>
+            </form>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script src="@Url.Content("~/js/login.js")?v=20261101"></script>
+}
