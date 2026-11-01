@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Entrar · Nexo Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+  <link href="./css/styles.css" rel="stylesheet">
+  <link href="./css/login.css" rel="stylesheet">
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <section class="login-story" aria-label="Sobre o Nexo Admin">
+      <a class="brand login-brand" href="./index.html"><span class="brand-mark"><i class="bi bi-grid-1x2-fill"></i></span><span>Nexo<span class="brand-light">Admin</span></span></a>
+      <div class="story-content">
+        <span class="story-kicker"><span class="live-dot"></span> GESTÃO MAIS SIMPLES, TODOS OS DIAS</span>
+        <h1>Seu negócio<br>em boas mãos<span>.</span></h1>
+        <p>Uma visão clara da sua operação para você cuidar do que realmente importa.</p>
+        <div class="story-preview" aria-hidden="true">
+          <div class="preview-top"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-title">Visão geral</span><span class="preview-avatar">FC</span></div>
+          <div class="preview-greeting">Bom dia, Fulvio <span>✦</span><small>Aqui está o resumo da sua operação.</small></div>
+          <div class="preview-metrics"><div><small>Receita do mês</small><strong>R$ 48.290</strong><span><i class="bi bi-arrow-up-right"></i> 8,2%</span></div><div><small>Total de clientes</small><strong>2.486</strong><span><i class="bi bi-arrow-up-right"></i> 12,8%</span></div></div>
+          <div class="preview-chart"><div class="preview-chart-head"><strong>Visão financeira</strong><span>Esta semana <i class="bi bi-chevron-down"></i></span></div><svg viewBox="0 0 460 104" preserveAspectRatio="none"><defs><linearGradient id="loginFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#8a72f1" stop-opacity=".23"/><stop offset="1" stop-color="#8a72f1" stop-opacity="0"/></linearGradient></defs><path fill="url(#loginFill)" d="M0 80 C40 77 49 53 92 62 S148 82 184 48 S239 30 276 48 S329 60 368 31 S421 41 460 9 L460 104 L0 104Z"/><path d="M0 80 C40 77 49 53 92 62 S148 82 184 48 S239 30 276 48 S329 60 368 31 S421 41 460 9" fill="none" stroke="#9179f0" stroke-width="3" stroke-linecap="round"/></svg><div class="preview-days"><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span></div></div>
+        </div>
+      </div>
+      <div class="story-footer"><span>© 2026 Nexo Admin</span><span><i class="bi bi-shield-check"></i> Ambiente seguro</span></div>
+      <span class="decor decor-one"></span><span class="decor decor-two"></span>
+    </section>
+
+    <section class="login-main" aria-labelledby="loginTitle">
+      <div class="login-main-top"><span class="mobile-brand"><span class="brand-mark"><i class="bi bi-grid-1x2-fill"></i></span>Nexo<span>Admin</span></span><a class="help-link" href="mailto:suporte@nexo.app"><i class="bi bi-question-circle"></i> Precisa de ajuda?</a></div>
+      <div class="login-form-wrap">
+        <div class="form-heading"><span class="form-eyebrow">BEM-VINDO DE VOLTA</span><h2 id="loginTitle">Acesse sua conta</h2><p>Entre com seus dados para continuar.</p></div>
+        <form id="loginForm" novalidate>
+          <div class="login-field"><label for="loginEmail">E-mail</label><div class="input-with-icon"><i class="bi bi-envelope"></i><input id="loginEmail" name="email" type="email" autocomplete="username" placeholder="voce@empresa.com" autofocus></div></div>
+          <div class="login-field"><div class="password-label-row"><label for="loginPassword">Senha</label><a href="#recuperar" data-bs-toggle="modal" data-bs-target="#recoveryModal">Esqueceu sua senha?</a></div><div class="input-with-icon password-input"><i class="bi bi-lock"></i><input id="loginPassword" name="password" type="password" autocomplete="current-password" placeholder="Digite sua senha"><button type="button" id="togglePassword" aria-label="Mostrar senha"><i class="bi bi-eye"></i></button></div></div>
+          <div class="login-options"><label class="remember-option"><input class="form-check-input" type="checkbox" id="rememberMe"><span>Manter conectado</span></label><span class="secure-note"><i class="bi bi-shield-lock"></i> Login seguro</span></div>
+          <button class="btn btn-primary login-submit" type="submit"><span>Entrar</span><i class="bi bi-arrow-right"></i></button>
+          <div class="login-feedback" id="loginFeedback" role="status" aria-live="polite"></div>
+        </form>
+        <div class="login-separator"><span></span><small>ACESSO À PLATAFORMA</small><span></span></div>
+        <p class="login-help">Ainda não tem acesso? <a href="mailto:suporte@nexo.app">Fale com o administrador <i class="bi bi-arrow-up-right"></i></a></p>
+      </div>
+      <div class="login-main-footer"><a href="#privacidade">Privacidade</a><span>·</span><a href="#termos">Termos de uso</a><span class="footer-version">Nexo Admin <i class="bi bi-dot"></i> v1.0</span></div>
+    </section>
+  </main>
+
+  <div class="modal fade" id="recoveryModal" tabindex="-1" aria-labelledby="recoveryTitle" aria-hidden="true"><div class="modal-dialog modal-dialog-centered modal-sm"><form class="modal-content recovery-card" id="recoveryForm" novalidate><div class="modal-header"><div class="recovery-icon"><i class="bi bi-key"></i></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><h2 id="recoveryTitle">Recupere seu acesso</h2><p>Informe seu e-mail e enviaremos instruções para redefinir sua senha.</p><label for="recoveryEmail" class="form-label">E-mail cadastrado</label><input class="form-control" id="recoveryEmail" name="email" type="email" placeholder="voce@empresa.com"><div class="recovery-feedback" id="recoveryFeedback" role="status"></div></div><div class="modal-footer"><button type="button" class="btn btn-light border" data-bs-dismiss="modal">Voltar ao login</button><button type="submit" class="btn btn-primary">Enviar instruções <i class="bi bi-arrow-right ms-1"></i></button></div></form></div></div>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.22.1/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>

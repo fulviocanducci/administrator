@@ -6,6 +6,8 @@ Dashboard administrativo responsivo feito com HTML, CSS, Bootstrap, Bootstrap Ic
 
 Abra `index.html` no navegador. As fontes e bibliotecas usam CDN, então precisam de conexão com a internet.
 
+A tela de entrada está em `login.html`. O login e a recuperação de senha são fluxos de demonstração; conecte-os a uma API antes de usar com contas reais.
+
 ## Stack
 
 - Bootstrap 5.3.8 (versão estável; Bootstrap 6 ainda está em alpha)
