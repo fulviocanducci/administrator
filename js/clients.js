@@ -51,6 +51,19 @@
   }
   $('#visibleClients').text($('.records-table tbody tr').length);
 
+  $('#clientSearchForm').on('submit', function (event) {
+    event.preventDefault();
+    const query = String($('#clientSearch').val() || '').trim().toLocaleLowerCase('pt-BR');
+    let visible = 0;
+    $('.records-table tbody tr').each(function () {
+      const row = $(this);
+      const matches = !query || row.text().toLocaleLowerCase('pt-BR').includes(query);
+      row.toggle(matches);
+      if (matches) visible += 1;
+    });
+    $('#visibleClients').text(visible);
+  });
+
   $(document).on('click', '.edit-client', function () {
     const row = $(this).closest('tr');
     const id = row.attr('data-client-id');
